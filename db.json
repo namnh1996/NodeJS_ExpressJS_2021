@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Thinh"
+    },
+    {
+      "id": 2,
+      "name": "Tuan"
+    },
+    {
+      "id": 3,
+      "name": "Khang"
+    },
+    {
+      "name": "Nguyen Hai Nam"
+    }
+  ]
+}

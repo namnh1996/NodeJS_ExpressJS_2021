@@ -8,11 +8,14 @@ app.set('views', './views');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }))
 
-const users = [
-    {id: 1, name: 'Thinh'},
-    {id: 2, name: 'Tuan'},
-    {id: 3, name: 'Khang'}
-]
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
+ 
+const adapter = new FileSync('db.json')
+const db = low(adapter)
+//set defaults db
+// db.defaults({users: []}).write();
+let users = db.get('users').value();
 
 app.get('/', function(req,res){
     res.render('index',{
@@ -43,7 +46,8 @@ app.get('/users/create', function(req,res){
 
 app.post('/users/create',function(req,res){
     //console.log(req.body);
-    users.push(req.body);
+    //users.push(req.body);
+    db.get('users').push(req.body).write()
     res.redirect('/users')
 })
 
