@@ -1,4 +1,4 @@
-const db = require('../routes/db');
+const db = require('../db');
 const shortid = require('shortid');
 
 module.exports.index = function(req,res){

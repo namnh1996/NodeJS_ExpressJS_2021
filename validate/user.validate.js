@@ -19,5 +19,7 @@ module.exports.postCreate = function(req,res,next){
         });
         return;
     }
+    //truyen bien trong middleware
+    res.local.success = true;
     next();
 }
