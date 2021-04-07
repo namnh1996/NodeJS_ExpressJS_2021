@@ -13,7 +13,7 @@ app.set('views', './views');
 
 app.use(express.static('public'));
 
-app.use(cookieParser());
+app.use(cookieParser('hainam7'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
