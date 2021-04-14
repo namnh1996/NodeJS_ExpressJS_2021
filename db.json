@@ -1,11 +1,20 @@
 {
   "users": [
     {
-      "email": "namphuong36148@gmail.com",
+      "email": "namphuong361480@gmail.com",
       "name": "Nguyễn Hải Nam",
       "phone": "0968361480",
       "password": "dc0fa7df3d07904a09288bd2d2bb5f40",
-      "id": "yitw3Fvh6"
+      "id": "yitw3Fvh6",
+      "avatar": "uploads/8b4a6b71a6158bbcdf1b91740972ef8f"
+    },
+    {
+      "emial": "tom@gmail.com",
+      "name": "Tom",
+      "phone": "0968361480",
+      "password": "e10adc3949ba59abbe56e057f20f883e",
+      "id": "N0hsSQTpV",
+      "avatar": "uploads/3044b013e8c7381bf7c154ff03060af2"
     }
   ],
   "products": [

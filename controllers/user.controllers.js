@@ -35,8 +35,12 @@ module.exports.create =
 
 module.exports.postCreate = function(req,res){
     req.body.id = shortid.generate();
+
     req.body.password = md5(req.body.password);
+    
+    req.body.avatar = req.file.path.split('\\').slice(1).join("/");
+
     //console.log(req.body);
-    db.get('users').push(req.body).write()
-    res.redirect('/users')
+    db.get('users').push(req.body).write();
+    res.redirect('/users');
 }
