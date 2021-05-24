@@ -16,5 +16,6 @@ module.exports.index = function(req,res){
         res.render('products/index',{
             products: products
         })
+        //res.json(products);
     });
 }

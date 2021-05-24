@@ -16,7 +16,7 @@ const authRoute = require('./routes/auth.route');
 const authMiddleware = require('./middlewares/auth.middleware');
 const productRoute = require('./routes/product.route');
 const cookieParser = require('cookie-parser');
-const { propertyOf } = require('./db');
+const apiProductRoute = require('./api/routes/product.route');
 
 app.set('view engine','pug');
 app.set('views', './views');
@@ -29,10 +29,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 //set defaults db
 // db.defaults({users: []}).write();
-
+app.use('/api/products', apiProductRoute);
 app.use('/users',authMiddleware.requireAuth, userRoute);
 app.use('/auth',authRoute);
 app.use('/products', productRoute);
+
 
 app.get('/', function(req,res){
     res.render('index',{
