@@ -8,3 +8,8 @@ module.exports.index = function(req,res){
         res.json(products);
     });
 };
+
+module.exports.create = async function(req,res){
+    let product = await Product.create(req.body);
+    res.json(product);
+}
