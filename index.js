@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URL);
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const userRoute = require('./routes/user.route');
 const authRoute = require('./routes/auth.route');
