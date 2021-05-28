@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser', { useNewUrlParser: true });
 const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_URL);
 
